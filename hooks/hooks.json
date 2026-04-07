@@ -1,0 +1,26 @@
+{
+  "SessionEnd": [
+    {
+      "matcher": "",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "python3 ${CLAUDE_PLUGIN_ROOT}/scripts/compile.py --trigger session-end",
+          "timeout": 120
+        }
+      ]
+    }
+  ],
+  "PreCompact": [
+    {
+      "matcher": "",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "python3 ${CLAUDE_PLUGIN_ROOT}/scripts/compile.py --trigger pre-compact",
+          "timeout": 120
+        }
+      ]
+    }
+  ]
+}

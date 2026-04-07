@@ -1,0 +1,10 @@
+{
+  "name": "vault-compiler",
+  "version": "0.1.0",
+  "description": "Compiles claude-mem session data into structured knowledge articles in your Obsidian vault. Reads from claude-mem MCP tools, synthesizes concepts/connections/Q&A, writes to 11-CodeMemory/{project}/.",
+  "author": {
+    "name": "irfanfaraaz",
+    "url": "https://github.com/irfanfaraaz"
+  },
+  "keywords": ["obsidian", "knowledge-base", "memory", "compilation", "wiki"]
+}

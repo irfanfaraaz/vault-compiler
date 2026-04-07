@@ -1,6 +1,6 @@
 ---
 description: "Compile recent coding session observations from claude-mem into structured knowledge articles in the Obsidian vault. Use when the user says /compile, 'compile my sessions', 'compile knowledge', 'sync to vault', or wants to manually trigger knowledge compilation."
-argument-hint: "[project-name] [--all] [--since YYYY-MM-DD]"
+argument-hint: "[project-name] [--all] [--since YYYY-MM-DD] [--recompile]"
 allowed-tools: ["mcp__plugin_claude-mem_mcp-search__search", "mcp__plugin_claude-mem_mcp-search__timeline", "mcp__plugin_claude-mem_mcp-search__get_observations", "mcp__plugin_claude-mem_mcp-search__smart_search", "Read", "Write", "Edit", "Glob", "Bash"]
 ---
 
@@ -103,6 +103,7 @@ Compile recent claude-mem observations into structured knowledge articles in the
 - **project-name**: Compile only this project (e.g., `/compile pebbo`)
 - **--all**: Compile all projects
 - **--since YYYY-MM-DD**: Only process observations after this date
+- **--recompile**: Wipe all existing articles for the project and rebuild from scratch. Useful when articles have drifted or you want a clean slate. Deletes all files in `concepts/`, `connections/`, `qa/` and resets `index.md`, then recompiles all observations from the beginning.
 - No args: Compile current project (detect from working directory or ask)
 
 ## Deduplication Rules

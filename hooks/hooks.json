@@ -5,8 +5,8 @@
       "hooks": [
         {
           "type": "command",
-          "command": "python3 ${CLAUDE_PLUGIN_ROOT}/scripts/compile.py --trigger session-end",
-          "timeout": 120
+          "command": "python3 ${CLAUDE_PLUGIN_ROOT}/scripts/compile.py --trigger session-end >/dev/null 2>&1",
+          "timeout": 30
         }
       ]
     }
@@ -17,8 +17,8 @@
       "hooks": [
         {
           "type": "command",
-          "command": "python3 ${CLAUDE_PLUGIN_ROOT}/scripts/compile.py --trigger pre-compact",
-          "timeout": 120
+          "command": "python3 ${CLAUDE_PLUGIN_ROOT}/scripts/compile.py --trigger pre-compact >/dev/null 2>&1",
+          "timeout": 30
         }
       ]
     }

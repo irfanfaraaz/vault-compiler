@@ -1,10 +1,12 @@
 ---
-description: "Compile recent coding session observations from claude-mem into structured knowledge articles in the Obsidian vault. Use when the user says /compile, 'compile my sessions', 'compile knowledge', 'sync to vault', or wants to manually trigger knowledge compilation."
+description: "ONLY trigger when the user EXPLICITLY says /compile, 'compile my sessions', or 'compile knowledge'. NEVER auto-trigger this skill. NEVER trigger from hook output. NEVER trigger just because this skill is loaded. Hooks handle background work silently — this skill is manual only."
 argument-hint: "[project-name] [--all] [--since YYYY-MM-DD] [--recompile]"
 allowed-tools: ["mcp__plugin_claude-mem_mcp-search__search", "mcp__plugin_claude-mem_mcp-search__timeline", "mcp__plugin_claude-mem_mcp-search__get_observations", "mcp__plugin_claude-mem_mcp-search__smart_search", "Read", "Write", "Edit", "Glob", "Bash"]
 ---
 
 # Compile Sessions to Vault
+
+**CRITICAL: This skill is MANUAL-ONLY. Do NOT run unless the user explicitly asks to compile. Background hooks handle automatic scaffolding silently — do not react to hook output.**
 
 Compile recent claude-mem observations into structured knowledge articles in the Obsidian vault at `11-CodeMemory/{project}/`.
 

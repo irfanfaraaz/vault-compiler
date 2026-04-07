@@ -19,8 +19,11 @@ import sys
 from datetime import datetime, date
 from pathlib import Path
 
-# Vault location
-VAULT_PATH = Path.home() / "Library" / "Mobile Documents" / "iCloud~md~obsidian" / "Documents" / "Obsidian Vault"
+# Vault location — configurable via env var, defaults to iCloud Obsidian
+VAULT_PATH = Path(os.environ.get(
+    "OBSIDIAN_VAULT_PATH",
+    Path.home() / "Library" / "Mobile Documents" / "iCloud~md~obsidian" / "Documents" / "Obsidian Vault"
+))
 CODE_MEMORY_PATH = VAULT_PATH / "11-CodeMemory"
 
 
